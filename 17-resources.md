@@ -57,15 +57,21 @@ be using
 ## Accessing the software and input
 
 
-::: discussion
+::: prereq
+
+## Required Files
+
 The program used in this example can be retrieved using wget or a browser and copied to the remote.
 
 **Using wget**: 
 ```bash
-userid@ln03:~> wget /files/pi-mpi.py
+userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
 ```
 
-**Using a web browser**: /files/pi-mpi.py
+**Using a web browser**: 
+```bash
+https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
+```
 :::
 
 ## Baseline: running in serial

@@ -114,7 +114,7 @@ $ ls ~/.ssh/
 then generate a new public-private key pair,
 
 ```bash
-$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_{{ site.workshop_host }}_rsa
+$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_ARCHER2_rsa
 ```
 
 - `-o` (no default): use the OpenSSH key format,
@@ -138,8 +138,8 @@ Cryptography is only as good as the weakest link, and this will be
 used to connect to a powerful, precious, computational resource.
 
 Take a look in `~/.ssh` (use `ls ~/.ssh`). You should see the two 
-new files: your private key (`~/.ssh/key_{{ site.workshop_host }}_rsa`) and 
-the public key (`~/.ssh/key_{{ site.workshop_host }}_rsa.pub`). If a key is 
+new files: your private key (`~/.ssh/key_ARCHER2_rsa`) and 
+the public key (`~/.ssh/key_ARCHER2_rsa.pub`). If a key is 
 requested by the system administrators, the *public* key is the one
 to provide.
 
@@ -177,9 +177,9 @@ On Windows you can use
 ## Logging onto the system
 
 With all of this in mind, let's connect to a remote HPC system. In this
-workshop, we will connect to {{ site.workshop_host }} --- an HPC system
-located at the {{ site.workshop_host_location }}. Although it's unlikely that
-every system will be exactly like {{ site.workshop_host }}, it's a very good
+workshop, we will connect to ARCHER2 --- an HPC system
+located at the University of Edinburgh. Although it's unlikely that
+every system will be exactly like ARCHER2, it's a very good
 example of what you can expect from an HPC installation. To connect to our
 example computer, we will use SSH (if you are using PuTTY, see above).
 
@@ -260,7 +260,7 @@ convention:
 
  - `[local]$` when the command is to be entered on a terminal connected to your
   local computer
- - userid@ln03:~> when the command is to be entered on a
+ - `userid@ln03:~>` when the command is to be entered on a
   terminal connected to the remote system
  - `$` when it really doesn't matter which system the terminal is connected to.
 
@@ -284,10 +284,20 @@ disconnect when you see the reverse.
 
 
 :::::: keypoints
+
   - To connect to a remote HPC system using SSH and a password,
-  run `ssh yourUsername@remote.computer.address`.
+  run
+  
+```bash
+ssh yourUsername@remote.computer.address
+```
+
   - To connect to a remote HPC system using SSH and an SSH key,
-  run `ssh -i ~/.ssh/key_for_remote_computer yourUsername@remote.computer.address`.
+  run 
+  
+```bash
+ssh -i ~/.ssh/key_for_remote_computer yourUsername@remote.computer.address
+```
 ::::::
 
 

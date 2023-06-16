@@ -4,14 +4,20 @@ title: Setup
 
 
 
+# Setup
+
 There are several pieces of software you will wish to install before the
 workshop. Though installation help will be provided at the workshop, we
 recommend that these tools are installed (or at least downloaded) beforehand.
+
+::: prereq
 
 ## Bash and SSH
 
 This lesson requires a terminal application (`bash`, `zsh`, or others) with
 the ability to securely connect to a remote machine (`ssh`).
+
+:::
 
 ## Where to type commands: How to open a new shell
 
@@ -24,7 +30,7 @@ have one installed. There are also options for identifying and downloading a
 Unix Shell program, a Linux/UNIX emulator, or a program to access a Unix Shell
 on a server.
 
-## Software Setup
+## Shell Setup
 
 ::::::::::::::::::::::::::::::::::::::: discussion
 
@@ -57,7 +63,7 @@ the Windows start menu.
   &mdash; advanced option for Windows 10
 
 ::: discussion
-## Alternatives to Git for Windows
+## Alternatives to MobaXterm and Git for Windows 
 Other solutions are available for running Bash commands on Windows. There is
 now a Bash shell command-line tool available for Windows 10. Additionally,
 you can run Bash commands on a remote computer or server that already has a
@@ -66,13 +72,12 @@ Secure Shell (SSH) client. One such client available for free for Windows
 computers is PuTTY. See the reference below for information on installing and
 using PuTTY, using the Windows 10 command-line tool, or installing and using
 a Unix/Linux emulator.
+
 For advanced users, you may choose one of the following alternatives: 
-* Install the [Windows Subsystem for
-  Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-* Use the Windows [Powershell](
-tps://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7)
-* Read up on [Using a Unix/Linux emulator (Cygwin) or Secure Shell (SSH) client
-  (Putty)](http://faculty.smu.edu/reynolds/unixtut/windows.html)
+
+ * Install the [Windows Subsystem for   Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+ * Use the Windows [Powershell](tps://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7)
+ * Read up on [Using a Unix/Linux emulator (Cygwin) or Secure Shell (SSH) client (Putty)](http://faculty.smu.edu/reynolds/unixtut/windows.html)
 > ## Warning
 >
 > Commands in the Windows Subsystem for Linux (WSL), Powershell, or Cygwin
@@ -116,7 +121,7 @@ On most versions of Linux, the default Unix Shell is accessible by running the
 [xterm](https://en.wikipedia.org/wiki/Xterm), which can be found via the
 applications menu or the search bar.
 
-### Special cases
+#### Special cases
 
 If none of the options above address your circumstances, try an online search
 for: `Unix shell [your operating system]`.

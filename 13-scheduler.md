@@ -281,13 +281,15 @@ Why are the Slurm runtime and `sleep` time not identical?
 
 
 
-> ## Job environment variables
->
-> When Slurm runs a job, it sets a number of environment variables for the job. One of these will
-> let us check our work from the last problem. The `SLURM_CPUS_PER_TASK` variable is set to the
-> number of CPUs we requested with `-c`. Using the `SLURM_CPUS_PER_TASK` variable, modify your job
-> so that it prints how many CPUs have been allocated.
-{: .challenge}
+::: challenge
+## Job environment variables
+
+When Slurm runs a job, it sets a number of environment variables for the job. One of these will
+let us check our work from the last problem. The `SLURM_CPUS_PER_TASK` variable is set to the
+number of CPUs we requested with `-c`. Using the `SLURM_CPUS_PER_TASK` variable, modify your job
+so that it prints how many CPUs have been allocated.
+
+:::
 
 Resource requests are typically binding. If you exceed them, your job will be
 killed. Let's use walltime as an example. We will request 30 seconds of
@@ -464,15 +466,21 @@ parallel MPI programs typically requires four things:
   - The command and arguments for our parallel program.
 
 
-::: discussion
+::: prereq
+
+## Required Files
+
 The program used in this example can be retrieved using wget or a browser and copied to the remote.
 
 **Using wget**: 
 ```bash
-userid@ln03:~> wget /files/pi-mpi.py
+userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
 ```
 
-**Using a web browser**: /files/pi-mpi.py
+**Using a web browser**: 
+```bash
+https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
+```
 :::
 
 To illustrate this process, we will use a simple MPI parallel program that estimates the value of Pi.

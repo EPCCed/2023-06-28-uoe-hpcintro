@@ -37,7 +37,7 @@ some material we'll use later on, from a terminal on your local machine.
 ```
 or
 ```bash
-[user@laptop ~]$ wget /files/hpc-intro-data.tar.gz
+[user@laptop ~]$ wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
 ```
 
 ::: discussion
@@ -110,9 +110,9 @@ Using `curl` or `wget` commands like the following:
 
 ```bash
 [user@laptop ~]$ ssh userid@login.archer2.ac.uk
-userid@ln03:~> curl -O /files/hpc-intro-data.tar.gz
+userid@ln03:~> curl -O https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
 or
-userid@ln03:~> wget /files/hpc-intro-data.tar.gz
+userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
 ```
 
 Did it work? If not, what does the terminal output tell you about what
