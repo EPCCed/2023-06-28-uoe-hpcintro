@@ -27,9 +27,8 @@ userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-i
 ```
 
 **Using a web browser**: 
-```bash
-https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
-```
+
+[https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz](https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz)
 :::
 
 Computing with a remote computer offers very limited use if we cannot get files
@@ -239,7 +238,7 @@ modify this command?
 ```bash
 [user@laptop ~]$ rsync --help | grep port
      --port=PORT             specify double-colon alternate port number
-See http://rsync.samba.org/ for updates, bug reports, and answers
+See https://rsync.samba.org/ for updates, bug reports, and answers
 [user@laptop ~]$ rsync --port=768 test.txt userid@login.archer2.ac.uk:
 ```
 :::

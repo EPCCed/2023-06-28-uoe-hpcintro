@@ -477,10 +477,10 @@ The program used in this example can be retrieved using wget or a browser and co
 userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
 ```
 
-**Using a web browser**: 
-```bash
-https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py
-```
+**Using a web browser**:
+
+[https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py](https://epcced.github.io/2023-06-28-uoe-hpcintro/files/pi-mpi.py)
+
 :::
 
 To illustrate this process, we will use a simple MPI parallel program that estimates the value of Pi.
