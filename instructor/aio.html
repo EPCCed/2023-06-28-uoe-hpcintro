@@ -1105,7 +1105,7 @@ neighbors.</p>
   It’s a Beautiful Day in the Neighborhood
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The deepest layer should differ: <code>userid</code> is uniquely
 yours. Are there differences in the path at higher levels?</p>
@@ -1243,7 +1243,7 @@ computer cluster, you need to log out first. To do so, type
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There are several ways to do this. Most operating systems have a
 graphical system monitor, like the Windows Task Manager. More detailed
@@ -1293,7 +1293,7 @@ node.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2049,9 +2049,9 @@ script in it.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --partition={{ site.sched.partition }}</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --qos={{ site.sched.qos }}</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --reservation={{ site.sched.reservation }}</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --partition=standard</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --qos=short</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --reservation=shortqos</span></span>
 <span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=00:05:00</span></span>
 <span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --nodes=1</span></span>
@@ -2121,8 +2121,8 @@ of cores in parallel for the calculation.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --partition=standard</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --qos={{ site.sched.qos }}</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SABTCH --reservation=shortqos</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --qos=short</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --reservation=shortqos</span></span>
 <span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=00:00:30</span></span>
 <span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --nodes=1</span></span>
@@ -2500,7 +2500,7 @@ node).</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2587,6 +2587,31 @@ internet.”</li>
 </div>
 </div>
 </div>
+<div id="required-files" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<div id="required-files" class="callout-inner">
+<h3 class="callout-title">Required Files<a class="anchor" aria-label="anchor" href="#required-files"></a>
+</h3>
+<div class="callout-content">
+<p>The program used in this example can be retrieved using wget or a
+browser and copied to the remote.</p>
+<p><strong>Using wget</strong>:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></code></pre>
+</div>
+<p><strong>Using a web browser</strong>:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
 <p>Computing with a remote computer offers very limited use if we cannot
 get files to or from the cluster. There are several options for
 transferring data between computing resources, from command line options
@@ -2605,16 +2630,16 @@ is a quick way to download datasets or source code.</p>
 <code>wget https://some/link/to/a/file</code>. Try it out by downloading
 some material we’ll use later on, from a terminal on your local
 machine.</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ curl <span class="at">-O</span> /files/hpc-intro-data.tar.gz</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ curl <span class="at">-O</span> /files/hpc-intro-data.tar.gz</span></code></pre>
 </div>
 <p>or</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></code></pre>
 </div>
 <div id="tar.gz" class="callout discussion">
 <div class="callout-square">
@@ -2640,24 +2665,24 @@ the majority of HPC cluster machines run. You may also see the extension
 <code>scp</code> (“secure copy”). The syntax can be a little complex for
 new users, but we’ll break it down.</p>
 <p>To <em>upload to</em> another computer:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp path/to/local/file.txt userid@login.archer2.ac.uk:/path/on/ARCHER2</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp path/to/local/file.txt userid@login.archer2.ac.uk:/path/on/ARCHER2</span></code></pre>
 </div>
 <p>To <em>download from</em> another computer:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp userid@login.archer2.ac.uk:/path/on/ARCHER2/file.txt path/to/local/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp userid@login.archer2.ac.uk:/path/on/ARCHER2/file.txt path/to/local/</span></code></pre>
 </div>
 <p>Note that everything after the <code>:</code> is relative to our home
 directory on the remote computer. We can leave it at that if we don’t
 care where the file goes.</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp local-file.txt userid@login.archer2.ac.uk:</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp local-file.txt userid@login.archer2.ac.uk:</span></code></pre>
 </div>
 <div id="upload-a-file" class="callout challenge">
 <div class="callout-square">
@@ -2679,12 +2704,12 @@ directory on ARCHER2.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp hpc-intro-data.tar.gz userid@login.archer2.ac.uk:~/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp hpc-intro-data.tar.gz userid@login.archer2.ac.uk:~/</span></code></pre>
 </div>
 </div>
 </div>
@@ -2730,17 +2755,17 @@ local machine over SSH? Note that it may well fail, and that’s OK!</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Using <code>curl</code> or <code>wget</code> commands like the
 following:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ ssh userid@login.archer2.ac.uk</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> curl <span class="at">-O</span> https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">or</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ ssh userid@login.archer2.ac.uk</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> curl <span class="at">-O</span> https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">or</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz</span></code></pre>
 </div>
 <p>Did it work? If not, what does the terminal output tell you about
 what happened?</p>
@@ -2752,10 +2777,10 @@ what happened?</p>
 “<strong>r</strong>ecursive”: copy the item specified, and every item
 below it, and every item below those… until it reaches the bottom of the
 directory tree rooted at the folder name you provided.</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp <span class="at">-r</span> some-local-folder userid@login.archer2.ac.uk:target-directory/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ scp <span class="at">-r</span> some-local-folder userid@login.archer2.ac.uk:target-directory/</span></code></pre>
 </div>
 <div id="caution" class="callout callout">
 <div class="callout-square">
@@ -2807,19 +2832,23 @@ features for file transfer and is typically faster compared to both
 useful for transferring large and/or many files and creating synced
 backup folders. The syntax is similar to <code>scp</code>. To transfer
 <em>to</em> another computer with commonly used options:</p>
-<pre><code>[user@laptop ~]$ rsync -avzP path/to/local/file.txt userid@login.archer2.ac.uk:directory/path/on/ARCHER2/</code></pre>
-<p>{: .language-bash} The <code>a</code> (archive) option preserves file
-timestamps and permissions among other things; the <code>v</code>
-(verbose) option gives verbose output to help monitor the transfer; the
-<code>z</code> (compression) option compresses the file during transit
-to reduce size and transfer time; and the <code>P</code>
-(partial/progress) option preserves partially transferred files in case
-of an interruption and also displays the progress of the transfer.</p>
-<p>To recursively copy a directory, we can use the same options:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">-avzP</span> path/to/local/dir userid@login.archer2.ac.uk:directory/path/on/ARCHER2/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">-avzP</span> path/to/local/file.txt userid@login.archer2.ac.uk:directory/path/on/ARCHER2/</span></code></pre>
+</div>
+<p>The <code>a</code> (archive) option preserves file timestamps and
+permissions among other things; the <code>v</code> (verbose) option
+gives verbose output to help monitor the transfer; the <code>z</code>
+(compression) option compresses the file during transit to reduce size
+and transfer time; and the <code>P</code> (partial/progress) option
+preserves partially transferred files in case of an interruption and
+also displays the progress of the transfer.</p>
+<p>To recursively copy a directory, we can use the same options:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">-avzP</span> path/to/local/dir userid@login.archer2.ac.uk:directory/path/on/ARCHER2/</span></code></pre>
 </div>
 <p>As written, this will place the local directory and its contents
 under the specified directory on the remote system. If the trailing
@@ -2829,10 +2858,10 @@ and the contents of the source directory will be copied directly into
 the destination directory.</p>
 <p>The <code>a</code> (archive) option implies recursion.</p>
 <p>To download a file, we simply change the source and destination:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">-avzP</span> userid@login.archer2.ac.uk:path/on/ARCHER2/file.txt path/to/local/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">-avzP</span> userid@login.archer2.ac.uk:path/on/ARCHER2/file.txt path/to/local/</span></code></pre>
 </div>
 </div>
 </div>
@@ -2852,25 +2881,45 @@ custom SSH port is in use, you will have to specify it using the
 appropriate flag, often <code>-p</code>, <code>-P</code>, or
 <code>--port</code>. Check <code>--help</code> or the <code>man</code>
 page if you’re unsure.</p>
-<blockquote>
-<h4 id="rsync-port">Rsync Port</h4>
+</div>
+</div>
+</div>
+<div id="rsync-port" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="rsync-port" class="callout-inner">
+<h3 class="callout-title">Rsync Port<a class="anchor" aria-label="anchor" href="#rsync-port"></a>
+</h3>
+<div class="callout-content">
 <p>Say we have to connect <code>rsync</code> through port 768 instead of
 22. How would we modify this command?</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync test.txt userid@login.archer2.ac.uk:</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync test.txt userid@login.archer2.ac.uk:</span></code></pre>
 </div>
-<h4 id="solution">Solution</h4>
-<div class="codewrapper sourceCode" id="cb13">
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">--help</span> <span class="kw">|</span> <span class="fu">grep</span> port</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>     <span class="ex">--port=PORT</span>             specify double-colon alternate port number</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">See</span> http://rsync.samba.org/ for updates, bug reports, and answers</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">--port</span><span class="op">=</span>768 test.txt userid@login.archer2.ac.uk:</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">--help</span> <span class="kw">|</span> <span class="fu">grep</span> port</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>     <span class="ex">--port=PORT</span>             specify double-colon alternate port number</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">See</span> http://rsync.samba.org/ for updates, bug reports, and answers</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ rsync <span class="at">--port</span><span class="op">=</span>768 test.txt userid@login.archer2.ac.uk:</span></code></pre>
 </div>
-</blockquote>
+</div>
 </div>
 </div>
 </div>
@@ -2901,42 +2950,42 @@ that archive with <code>gzip</code> to save space. Let’s check using
 specified by <code>-f &lt;filename&gt;</code>, on the remote computer.
 Note that you can concatenate the two flags, instead of writing
 <code>-t -f</code> separately.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ ssh userid@login.archer2.ac.uk</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> tar <span class="at">-tf</span> hpc-lesson-data.tar.gz</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01971Z.txt</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/goostats</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/goodiff</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040B.txt</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01978B.txt</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02043B.txt</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02018B.txt</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01843A.txt</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01978A.txt</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01751B.txt</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01736A.txt</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01812A.txt</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02043A.txt</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01729B.txt</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040A.txt</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01843B.txt</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01751A.txt</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01729A.txt</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040Z.txt</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ ssh userid@login.archer2.ac.uk</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> tar <span class="at">-tf</span> hpc-lesson-data.tar.gz</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01971Z.txt</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/goostats</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/goodiff</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040B.txt</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01978B.txt</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02043B.txt</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02018B.txt</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01843A.txt</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01978A.txt</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01751B.txt</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01736A.txt</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01812A.txt</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02043A.txt</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01729B.txt</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040A.txt</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01843B.txt</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01751A.txt</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE01729A.txt</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="ex">hpc-intro-data/north-pacific-gyre/NENE02040Z.txt</span></span></code></pre>
 </div>
 <p>This shows a folder containing another folder, which contains a bunch
 of files. If you’ve taken The Carpentries’ Shell lesson recently, these
 might look familiar. Let’s see about that compression, using
 <code>du</code> for “<strong>d</strong>isk <strong>u</strong>sage”.</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> du <span class="at">-sh</span> hpc-lesson-data.tar.gz</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">36K</span>     hpc-intro-data.tar.gz</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> du <span class="at">-sh</span> hpc-lesson-data.tar.gz</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">36K</span>     hpc-intro-data.tar.gz</span></code></pre>
 </div>
 <div id="files-occupy-at-least-one-block" class="callout callout">
 <div class="callout-square">
@@ -2980,19 +3029,19 @@ flags.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4">
   Commands
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> tar <span class="at">-xvzf</span> hpc-lesson-data.tar.gz</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> tar <span class="at">-xvzf</span> hpc-lesson-data.tar.gz</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3021,11 +3070,11 @@ flags.</p>
 </div>
 <p>Note that we did not type out <code>-x -v -z -f</code>, thanks to the
 flag concatenation, though the command works identically either way.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> du <span class="at">-sh</span> hpc-lesson-data</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">144K</span>    hpc-intro-data</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">userid@ln03:~</span><span class="op">&gt;</span> du <span class="at">-sh</span> hpc-lesson-data</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">144K</span>    hpc-intro-data</span></code></pre>
 </div>
 </div>
 </div>
@@ -3047,10 +3096,10 @@ size of the raw data!</p>
 <p>If you want to reverse the process — compressing raw data instead of
 extracting it — set a <code>c</code> flag instead of <code>x</code>, set
 the archive filename, then provide a directory to compress:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ tar <span class="at">-cvzf</span> compressed_data.tar.gz hpc-intro-data</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[user@laptop</span> ~]$ tar <span class="at">-cvzf</span> compressed_data.tar.gz hpc-intro-data</span></code></pre>
 </div>
 <div id="working-with-windows" class="callout discussion">
 <div class="callout-square">
@@ -3245,7 +3294,7 @@ worked or not.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Creating a file called <code>submit-pi-mpi.slurm</code>:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -3435,7 +3484,7 @@ figure for the Calculation core seconds. Is this what you observe?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The table below shows example timings for runs on {{ site.remote.name
 }}</p>
@@ -3652,7 +3701,7 @@ choose this option?</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The table below gives example results for {{ site.host_name }} based
 on the example runtimes given in the solution above.</p>
