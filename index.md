@@ -2,8 +2,11 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. 
 
 
-[workbench]: https://carpentries.github.io/sandpaper-docs
+## Registration
+
+Please use the [ARCHER2 course registration form](https://www.archer2.ac.uk/training/register/?course=230626-software-carpentry)</a> to sign up for the workshop.
+
+## General Information
 
