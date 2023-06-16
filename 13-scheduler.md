@@ -492,9 +492,9 @@ script that runs the program across two compute nodes on the cluster. Create a f
 ```bash
 #!/bin/bash
 
-#SBATCH --partition={{ site.sched.partition }}
-#SBATCH --qos={{ site.sched.qos }}
-#SBATCH --reservation={{ site.sched.reservation }}
+#SBATCH --partition=standard
+#SBATCH --qos=short
+#SBATCH --reservation=shortqos
 #SBATCH --time=00:05:00
 
 #SBATCH --nodes=1
@@ -528,7 +528,6 @@ As for our other jobs, we launch using the `sbatch` command.
 userid@uan01:/work/ta114/ta114/userid> sbatch run-pi-mpi.slurm
 ```
 
-
 The program generates no output with all details printed to the job log.
 
 
@@ -545,8 +544,8 @@ Here is a modified script
 #!/bin/bash
 
 #SBATCH --partition=standard
-#SBATCH --qos={{ site.sched.qos }}
-#SABTCH --reservation=shortqos
+#SBATCH --qos=short
+#SBATCH --reservation=shortqos
 #SBATCH --time=00:00:30
 
 #SBATCH --nodes=1

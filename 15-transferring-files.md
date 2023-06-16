@@ -15,6 +15,23 @@ exercises: 15
 - "`scp` transfers files to and from your computer."
 :::
 
+::: prereq
+
+## Required Files
+
+The program used in this example can be retrieved using wget or a browser and copied to the remote.
+
+**Using wget**: 
+```bash
+userid@ln03:~> wget https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
+```
+
+**Using a web browser**: 
+```bash
+https://epcced.github.io/2023-06-28-uoe-hpcintro/files/hpc-intro-data.tar.gz
+```
+:::
+
 Computing with a remote computer offers very limited use if we cannot get files
 to or from the cluster. There are several options for transferring data between
 computing resources, from command line options to GUI programs, which we will
@@ -164,10 +181,11 @@ advanced features for file transfer and is typically faster compared to both
 and/or many files and creating synced backup folders.
 The syntax is similar to `scp`. To transfer *to* another computer with
 commonly used options:
-```
+
+```bash
 [user@laptop ~]$ rsync -avzP path/to/local/file.txt userid@login.archer2.ac.uk:directory/path/on/ARCHER2/
 ```
-{: .language-bash}
+
 The `a` (archive) option preserves file timestamps and permissions among
 other things; the `v` (verbose) option gives verbose output to help monitor
 the transfer; the `z` (compression) option compresses the file during transit
@@ -180,6 +198,7 @@ To recursively copy a directory, we can use the same options:
 ```bash
 [user@laptop ~]$ rsync -avzP path/to/local/dir userid@login.archer2.ac.uk:directory/path/on/ARCHER2/
 ```
+
 As written, this will place the local directory and its contents under the
 specified directory on the remote system. If the trailing slash is omitted on
 the destination, a new directory corresponding to the transferred directory
@@ -203,22 +222,27 @@ transfer files. By default, SSH uses network port 22. If a custom SSH port is
 in use, you will have to specify it using the appropriate flag, often `-p`,
 `-P`, or `--port`. Check `--help` or the `man` page if you're unsure.
 
-> #### Rsync Port
->
-> Say we have to connect `rsync` through port 768 instead of 22. How would we
-> modify this command?
->
-> ```bash
-> [user@laptop ~]$ rsync test.txt userid@login.archer2.ac.uk:
-> ```
->
-> #### Solution
-> ```bash
-> [user@laptop ~]$ rsync --help | grep port
->      --port=PORT             specify double-colon alternate port number
-> See http://rsync.samba.org/ for updates, bug reports, and answers
-> [user@laptop ~]$ rsync --port=768 test.txt userid@login.archer2.ac.uk:
-> ```
+:::
+
+::: challenge
+#### Rsync Port
+
+Say we have to connect `rsync` through port 768 instead of 22. How would we
+modify this command?
+
+```bash
+[user@laptop ~]$ rsync test.txt userid@login.archer2.ac.uk:
+```
+
+::: solution
+
+```bash
+[user@laptop ~]$ rsync --help | grep port
+     --port=PORT             specify double-colon alternate port number
+See http://rsync.samba.org/ for updates, bug reports, and answers
+[user@laptop ~]$ rsync --port=768 test.txt userid@login.archer2.ac.uk:
+```
+:::
 :::
 
 ## Archiving Files
