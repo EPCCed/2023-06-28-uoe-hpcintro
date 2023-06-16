@@ -140,7 +140,9 @@ which: no ncdump in (/usr/local/maven/bin:/lus/cls01095/work/y07/shared/bolt/0.7
 We can find the `ncdump` command by using `module load`:
 
 ```bash
- module load cray-netcdf 
+ module load cray-hdf5
+ module load cray-netcdf
+which ncdump
 ```
 ```output
 /opt/cray/pe/netcdf/4.7.4.2/bin/ncdump
