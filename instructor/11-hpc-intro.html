@@ -153,12 +153,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         2. Why use an HPC System?
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#hpc-research-examples">HPC research examples</a></li>
+<li><a href="#a-standard-laptop-for-standard-tasks">A Standard Laptop for Standard Tasks</a></li>
+<li><a href="#when-tasks-take-too-long">When Tasks Take Too Long</a></li>
+<li><a href="#when-one-server-is-not-enough">When One Server Is Not Enough</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -306,6 +316,168 @@
 </div>
 </div>
 </div>
+<section id="hpc-research-examples"><h2 class="section-heading">HPC research examples<a class="anchor" aria-label="anchor" href="#hpc-research-examples"></a>
+</h2>
+<hr class="half-width"><p>Frequently, research problems that use computing can outgrow the
+capabilities of the desktop or laptop computer where they started:</p>
+<ul><li>A statistics student wants to cross-validate a model. This involves
+running the model 1000 times — but each run takes an hour. Running the
+model on a laptop will take over a month! In this research problem,
+final results are calculated after all 1000 models have run, but
+typically only one model is run at a time (in <strong>serial</strong>)
+on the laptop. Since each of the 1000 runs is independent of all others,
+and given enough computers, it’s theoretically possible to run them all
+at once (in <strong>parallel</strong>).</li>
+<li>A genomics researcher has been using small datasets of sequence
+data, but soon will be receiving a new type of sequencing data that is
+10 times as large. It’s already challenging to open the datasets on a
+computer — analyzing these larger datasets will probably crash it. In
+this research problem, the calculations required might be impossible to
+parallelize, but a computer with <strong>more memory</strong> would be
+required to analyze the much larger future data set.</li>
+<li>An engineer is using a fluid dynamics package that has an option to
+run in parallel. So far, this option was not utilized on a desktop. In
+going from 2D to 3D simulations, the simulation time has more than
+tripled. It might be useful to take advantage of that option or feature.
+In this research problem, the calculations in each region of the
+simulation are largely independent of calculations in other regions of
+the simulation. It’s possible to run each region’s calculations
+simultaneously (in <strong>parallel</strong>), communicate selected
+results to adjacent regions as needed, and repeat the calculations to
+converge on a final set of results. In moving from a 2D to a 3D model,
+<strong>both the amount of data and the amount of calculations increases
+greatly</strong>, and it’s theoretically possible to distribute the
+calculations across multiple computers communicating over a shared
+network.</li>
+</ul><p>In all these cases, access to more (and larger) computers is needed.
+Those computers should be usable at the same time, <strong>solving many
+researchers’ problems in parallel</strong>.</p>
+<div id="break-the-ice" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="break-the-ice" class="callout-inner">
+<h3 class="callout-title">Break the Ice<a class="anchor" aria-label="anchor" href="#break-the-ice"></a>
+</h3>
+<div class="callout-content">
+<p>Talk to your neighbour, office mate or <a href="https://rubberduckdebugging.com/" class="external-link">rubber duck</a> about your
+research.</p>
+<ul><li>How does computing help you do your research?</li>
+<li>How could more computing help you do more or better research?</li>
+</ul></div>
+</div>
+</div>
+</section><section id="a-standard-laptop-for-standard-tasks"><h2 class="section-heading">A Standard Laptop for Standard Tasks<a class="anchor" aria-label="anchor" href="#a-standard-laptop-for-standard-tasks"></a>
+</h2>
+<hr class="half-width"><p>Today, people coding or analysing data typically work with
+laptops.</p>
+<figure><img src="../fig/200px-laptop-openclipartorg-aoguerrero.svg" alt="A standard laptop" class="figure mx-auto d-block"><figcaption>A standard laptop</figcaption></figure><p>Let’s dissect what resources programs running on a laptop
+require:</p>
+<ul><li>the keyboard and/or touchpad is used to tell the computer what to do
+(<strong>Input</strong>)</li>
+<li>the internal computing resources <strong>Central Processing
+Unit</strong> and <strong>Memory</strong> perform calculation</li>
+<li>the display depicts progress and results
+(<strong>Output</strong>)</li>
+</ul><p>Schematically, this can be reduced to the following:</p>
+<figure><img src="../fig/Simple_Von_Neumann_Architecture.svg" alt="Schematic of how a computer works" class="figure mx-auto d-block"><figcaption>Schematic of how a computer works</figcaption></figure></section><section id="when-tasks-take-too-long"><h2 class="section-heading">When Tasks Take Too Long<a class="anchor" aria-label="anchor" href="#when-tasks-take-too-long"></a>
+</h2>
+<hr class="half-width"><p>When the task to solve becomes heavy on computations, the operations
+are typically out-sourced from the local laptop or desktop to elsewhere.
+Take for example the task to find the directions for your next vacation.
+The capabilities of your laptop are typically not enough to calculate
+that route spontaneously: <a href="https://en.wikipedia.org/wiki/Dijkstra's_algorithm" class="external-link">finding
+the shortest path</a> through a network runs on the order of (<em>v</em>
+log <em>v</em>) time, where <em>v</em> (vertices) represents the number
+of intersections in your map. Instead of doing this yourself, you use a
+website, which in turn runs on a server, that is almost definitely not
+in the same room as you are.</p>
+<figure style="max-width: 30%; text-align: center"><img src="../fig/servers-openclipartorg-ericlemerdy.svg" alt="A rack half full with servers" class="figure figure"><div class="figcaption">
+A rack half full with servers
+</div>
+</figure><p>Note here, that a server is mostly a noisy computer mounted into a
+rack cabinet which in turn resides in a data center. The internet made
+it possible that these data centers do not require to be nearby your
+laptop. What people call <strong>the cloud</strong> is mostly a
+web-service where you can rent such servers by providing your credit
+card details and requesting remote resources that satisfy your
+requirements. This is often handled through an online, browser-based
+interface listing the various machines available and their capacities in
+terms of processing power, memory, and storage.</p>
+<p>The server itself has no direct display or input methods attached to
+it. But most importantly, it has much more storage, memory and compute
+capacity than your laptop will ever have. In any case, you need a local
+device (laptop, workstation, mobile phone or tablet) to interact with
+this remote machine, which people typically call ‘a server’.</p>
+</section><section id="when-one-server-is-not-enough"><h2 class="section-heading">When One Server Is Not Enough<a class="anchor" aria-label="anchor" href="#when-one-server-is-not-enough"></a>
+</h2>
+<hr class="half-width"><p>If the computational task or analysis to complete is daunting for a
+single server, larger agglomerations of servers are used. These go by
+the name of “clusters” or “super computers”.</p>
+<figure style="max-width: 30%; text-align: center; display: block"><img src="../fig/serverrack-openclipartorg-psteinb-basedon-ericlemerdy.svg" alt="A rack with servers" class="figure figure"><div class="figcaption">
+A rack with servers
+</div>
+</figure><p>The methodology of providing the input data, configuring the program
+options, and retrieving the results is quite different to using a plain
+laptop. Moreover, using a graphical interface is often discarded in
+favor of using the command line. This imposes a double paradigm shift
+for prospective users asked to</p>
+<ol style="list-style-type: decimal"><li>work with the command line interface (CLI), rather than a graphical
+user interface (GUI)</li>
+<li>work with a distributed set of computers (called nodes) rather than
+the machine attached to their keyboard &amp; mouse</li>
+</ol><div id="ive-never-used-a-server-have-i" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="ive-never-used-a-server-have-i" class="callout-inner">
+<h3 class="callout-title">I’ve Never Used a Server, Have I?<a class="anchor" aria-label="anchor" href="#ive-never-used-a-server-have-i"></a>
+</h3>
+<div class="callout-content">
+<p>Take a minute and think about which of your daily interactions with a
+computer may require a remote server or even cluster to provide you with
+results.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Some Ideas
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul><li>Checking email: your computer (possibly in your pocket) contacts a
+remote machine, authenticates, and downloads a list of new messages; it
+also uploads changes to message status, such as whether you read, marked
+as junk, or deleted the message. Since yours is not the only account,
+the mail server is probably one of many in a data center.</li>
+<li>Searching for a phrase online involves comparing your search term
+against a massive database of all known sites, looking for matches. This
+“query” operation can be straightforward, but building that database is
+a <a href="https://en.wikipedia.org/wiki/MapReduce" class="external-link">monumental task</a>!
+Servers are involved at every step.</li>
+<li>Searching for directions on a mapping website involves connecting
+your
+<ol style="list-style-type: upper-alpha"><li>starting and (B) end points by <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" class="external-link">traversing a
+graph</a> in search of the “shortest” path by distance, time, expense,
+or another metric. Converting a map into the right form is relatively
+simple, but calculating all the possible routes between A and B is
+expensive.</li>
+</ol></li>
+</ul><p>Checking email could be serial: your machine connects to one server
+and exchanges data. Searching by querying the database for your search
+term (or endpoints) could also be serial, in that one machine receives
+your query and returns the result. However, assembling and storing the
+full database is far beyond the capability of any one machine.
+Therefore, these functions are served in parallel by a large, <a href="https://en.wikipedia.org/wiki/Hyperscale_computing" class="external-link">“hyperscale”</a>
+collection of servers working together.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -329,10 +501,7 @@ any links that you are not going to use.
 
 use like [gitbash][gitbash]
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/10-connecting.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/12-cluster.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

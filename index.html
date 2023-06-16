@@ -136,23 +136,12 @@
                   <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Summary and Setup
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-        
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#bash-and-ssh">Bash and SSH</a></li>
-<li><a href="#where-to-type-commands-how-to-open-a-new-shell">Where to type commands: How to open a new shell</a></li>
-<li><a href="#software-setup">Software Setup</a></li>
-<li><a href="#setup-an-ssh-client">Setup an SSH client</a></li>
-<li><a href="#connect-to-archer2">Connect to ARCHER2</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -279,29 +268,88 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
+<div id="prereq1" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Prereq<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+</h3>
+<div class="callout-content">
+<p>To begin this lesson you must have completed the following</p>
+<ul><li>
+<a href="#registration">Register</a> for the course</li>
+<li>Participants must bring a laptop with a Mac, Linux, or Windows
+operating system (not a tablet, Chromebook, etc.) that they can download
+and run MobaXterm on. Alternatively, they should have a few specific
+software packages installed (listed in the Setup section below). They
+are also required to abide by the ARCHER2 Training Code of Conduct.</li>
+<li>Attendees should be familiar with using the bash shell. This is
+covered in the introduction to the shell HPC course.</li>
+<li>Complete the software/system <a href="#setup">setup</a> including
+the connection to Archer2 via <a href="#setup-an-ssh-client">SSH</a>.</li>
+</ul></div>
+</div>
+</div>
 <section id="registration"><h2 class="section-heading">Registration<a class="anchor" aria-label="anchor" href="#registration"></a>
 </h2>
 <hr class="half-width"><p>Please use the <a href="https://www.archer2.ac.uk/training/register/?course=230626-software-carpentry" class="external-link">ARCHER2
 course registration form</a> to sign up for the workshop.</p>
 </section><section id="general-information"><h2 class="section-heading">General Information<a class="anchor" aria-label="anchor" href="#general-information"></a>
 </h2>
-<hr class="half-width"><!-- 
+<hr class="half-width"><p>This lesson is an introduction to using high-performance computing
+systems effectively. We obviously can’t cover every case or give an
+exhaustive course on parallel programming in just one lesson of teaching
+time. Instead, this lesson is intended to give students a good
+introduction and overview of the tools available and how to use them
+effectively.</p>
+<p>By the end of this lesson, students will know how to:</p>
+<div id="checklist1" class="callout checklist">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check-square"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Checklist<a class="anchor" aria-label="anchor" href="#checklist1"></a>
+</h3>
+<div class="callout-content">
+<ul><li>Identify problems an HPC system can help solve</li>
+<li>Use the UNIX shell (also known as terminal or command line) to
+operate a computer, connect to an HPC system, and write simple shell
+scripts.</li>
+<li>Submit and manage jobs on an HPC system using a scheduler, transfer
+files, and use software through environment modules.</li>
+</ul></div>
+</div>
+</div>
+<!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
 
 use like [gitbash][gitbash]
- --></section><section id="setup"><p>There are several pieces of software you will wish to install before
+ -->
+</section><section id="setup"><div class="section level1">
+<h1 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a></h1>
+<p>There are several pieces of software you will wish to install before
 the workshop. Though installation help will be provided at the workshop,
 we recommend that these tools are installed (or at least downloaded)
 beforehand.</p>
-<section id="bash-and-ssh"><h2 class="section-heading">Bash and SSH<a class="anchor" aria-label="anchor" href="#bash-and-ssh"></a>
-</h2>
-<hr class="half-width"><p>This lesson requires a terminal application (<code>bash</code>,
+<div id="bash-and-ssh" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<div id="bash-and-ssh" class="callout-inner">
+<h3 class="callout-title">Bash and SSH<a class="anchor" aria-label="anchor" href="#bash-and-ssh"></a>
+</h3>
+<div class="callout-content">
+<p>This lesson requires a terminal application (<code>bash</code>,
 <code>zsh</code>, or others) with the ability to securely connect to a
 remote machine (<code>ssh</code>).</p>
-</section><section id="where-to-type-commands-how-to-open-a-new-shell"><h2 class="section-heading">Where to type commands: How to open a new shell<a class="anchor" aria-label="anchor" href="#where-to-type-commands-how-to-open-a-new-shell"></a>
-</h2>
-<hr class="half-width"><p>The shell is a program that enables us to send commands to the
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="where-to-type-commands-how-to-open-a-new-shell">Where to type commands: How to open a new shell<a class="anchor" aria-label="anchor" href="#where-to-type-commands-how-to-open-a-new-shell"></a></h2>
+<p>The shell is a program that enables us to send commands to the
 computer and receive output. It is also referred to as the terminal or
 command line.</p>
 <p>Some computers include a default Unix Shell program. The steps below
@@ -309,9 +357,10 @@ describe some methods for identifying and opening a Unix Shell program
 if you already have one installed. There are also options for
 identifying and downloading a Unix Shell program, a Linux/UNIX emulator,
 or a program to access a Unix Shell on a server.</p>
-</section><section id="software-setup"><h2 class="section-heading">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a>
-</h2>
-<hr class="half-width"><div id="details" class="callout discussion">
+</div>
+<div class="section level2">
+<h2 id="shell-setup">Shell Setup<a class="anchor" aria-label="anchor" href="#shell-setup"></a></h2>
+<div id="details" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -354,12 +403,13 @@ Alternative option used by other Software Carpentries</li>
 <li>
 <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" class="external-link">Windows
 Subsystem for Linux</a> — advanced option for Windows 10</li>
-</ul><div id="alternatives-to-git-for-windows" class="callout discussion">
+</ul><div id="alternatives-to-mobaxterm-and-git-for-windows" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="alternatives-to-git-for-windows" class="callout-inner">
-<h3 class="callout-title">Alternatives to Git for Windows<a class="anchor" aria-label="anchor" href="#alternatives-to-git-for-windows"></a>
+<div id="alternatives-to-mobaxterm-and-git-for-windows" class="callout-inner">
+<h3 class="callout-title">Alternatives to MobaXterm and Git for
+Windows<a class="anchor" aria-label="anchor" href="#alternatives-to-mobaxterm-and-git-for-windows"></a>
 </h3>
 <div class="callout-content">
 <p>Other solutions are available for running Bash commands on Windows.
@@ -369,17 +419,21 @@ that already has a Unix Shell, from your Windows machine. This can
 usually be done through a Secure Shell (SSH) client. One such client
 available for free for Windows computers is PuTTY. See the reference
 below for information on installing and using PuTTY, using the Windows
-10 command-line tool, or installing and using a Unix/Linux emulator. For
-advanced users, you may choose one of the following alternatives: *
-Install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" class="external-link">Windows
-Subsystem for Linux</a> * Use the Windows <a href="tps://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7">Powershell</a>
-* Read up on <a href="http://faculty.smu.edu/reynolds/unixtut/windows.html" class="external-link">Using a
+10 command-line tool, or installing and using a Unix/Linux emulator.</p>
+<p>For advanced users, you may choose one of the following
+alternatives:</p>
+<ul><li>Install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" class="external-link">Windows
+Subsystem for Linux</a>
+</li>
+<li>Use the Windows <a href="tps://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7">Powershell</a>
+</li>
+<li>Read up on <a href="http://faculty.smu.edu/reynolds/unixtut/windows.html" class="external-link">Using a
 Unix/Linux emulator (Cygwin) or Secure Shell (SSH) client (Putty)</a>
 &gt; ## Warning &gt; &gt; Commands in the Windows Subsystem for Linux
 (WSL), Powershell, or Cygwin &gt; may differ slightly from those shown
 in the lesson or presented in the &gt; workshop. Please ask if you
-encounter such a mismatch — you’re &gt; probably not alone.</p>
-</div>
+encounter such a mismatch — you’re &gt; probably not alone.</li>
+</ul></div>
 </div>
 </div>
 </div>
@@ -427,8 +481,8 @@ running the <a href="https://help.gnome.org/users/gnome-terminal/stable/" class=
 Terminal</a> or <a href="https://konsole.kde.org/" class="external-link">(KDE) Konsole</a> or
 <a href="https://en.wikipedia.org/wiki/Xterm" class="external-link">xterm</a>, which can be
 found via the applications menu or the search bar.</p>
-<div class="section level3">
-<h3 id="special-cases">Special cases<a class="anchor" aria-label="anchor" href="#special-cases"></a></h3>
+<div class="section level4">
+<h4 id="special-cases">Special cases<a class="anchor" aria-label="anchor" href="#special-cases"></a></h4>
 <p>If none of the options above address your circumstances, try an
 online search for: <code>Unix shell [your operating system]</code>.</p>
 <p>This setup takes you through getting ready for the course by ensuring
@@ -440,9 +494,10 @@ user).</p>
 </div>
 </div>
 </div>
-</section><section id="setup-an-ssh-client"><h2 class="section-heading">Setup an SSH client<a class="anchor" aria-label="anchor" href="#setup-an-ssh-client"></a>
-</h2>
-<hr class="half-width"><div id="details-1" class="callout discussion">
+</div>
+<div class="section level2">
+<h2 id="setup-an-ssh-client">Setup an SSH client<a class="anchor" aria-label="anchor" href="#setup-an-ssh-client"></a></h2>
+<div id="details-1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -508,9 +563,10 @@ your terminal application.</p>
 </div>
 </div>
 </div>
-</section><section id="connect-to-archer2"><h2 class="section-heading">Connect to ARCHER2<a class="anchor" aria-label="anchor" href="#connect-to-archer2"></a>
-</h2>
-<hr class="half-width"><div id="details-2" class="callout discussion">
+</div>
+<div class="section level2">
+<h2 id="connect-to-archer2">Connect to ARCHER2<a class="anchor" aria-label="anchor" href="#connect-to-archer2"></a></h2>
+<div id="details-2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -636,7 +692,10 @@ any links that you are not going to use.
 
 use like [gitbash][gitbash]
  -->
-</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+</div>
+</div>
+
+      </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="10-connecting.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
