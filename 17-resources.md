@@ -201,7 +201,7 @@ seconds. Is this what you observe?
 
 ::: solution
 
-The table below shows example timings for runs on {{ site.remote.name }}
+The table below shows example timings for runs on ARCHER2
 
 | Cores      | Overall run time (s) | Calculation time (s) |       Calculation core seconds |
 |-----------:|---------------------:|---------------------:|-------------------------------:|
@@ -264,7 +264,7 @@ Given your results, try to answer the following questions:
 
 ::: solution
 
-The table below gives example results for {{ site.host_name }} based on the example 
+The table below gives example results for ARCHER2 based on the example 
 runtimes given in the solution above.
 
 | Cores      | Overall run time (s) | Ideal speedup | Actual speedup | Parallel efficiency |

@@ -86,7 +86,7 @@ single argument.
 
 Go ahead and open your terminal or graphical SSH client, then log in to the
 cluster using your username and the remote computer you can reach from the
-outside world, {{ site.remote.location }}.
+outside world, EPCC, The University of Edinburgh.
 
 ```bash
 [user@laptop ~]$ ssh userid@login.archer2.ac.uk
@@ -308,7 +308,7 @@ userid@ln03:~> df -Th
 The local filesystems (ext, tmp, xfs, zfs) will depend on whether you're
 on the same login node (or compute node, later on). Networked filesystems
 (beegfs, cifs, gpfs, nfs, pvfs) will be similar --- but may include
-{{ site.remote.user }}, depending on how it is [mounted](
+userid, depending on how it is [mounted](
 https://en.wikipedia.org/wiki/Mount_(computing)).
 :::
 
