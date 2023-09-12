@@ -43,7 +43,7 @@
         
       </div>
     </div>
-    <div class="selector-container ">
+    <div class="selector-container">
       
       
       <div class="dropdown">
@@ -122,9 +122,11 @@
 </aside><div class="container">
       <div class="row">
         <!-- START: inst/pkgdown/templates/navbar.html -->
-  <div id="sidebar-col" class="col-lg-4">
-    <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle"><i class="search-icon" data-feather="x" role="img"></i></button>
+<div id="sidebar-col" class="col-lg-4">
+  <div id="sidebar" class="sidebar">
+      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle">
+          <i class="search-icon" data-feather="x" role="img"></i>
+        </button>
         <div class="sidebar-inner">
           <div class="row mobile-row">
             <div class="col">
@@ -306,6 +308,7 @@
             </div>
             <hr class="half-width resources">
 <a href="aio.html">See all in one page</a>
+            
 
             <hr class="d-none d-sm-block d-md-none">
 <div class="d-grid gap-1">
@@ -329,7 +332,7 @@
         
 <section id="aio-10-connecting"><p>Content from <a href="10-connecting.html">Connecting to the remote HPC systemd</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/10-connecting.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -710,7 +713,7 @@ use like [gitbash][gitbash]
 </div>
 </div></section><section id="aio-11-hpc-intro"><p>Content from <a href="11-hpc-intro.html">Why use an HPC System?</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/11-hpc-intro.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -949,7 +952,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-12-cluster"><p>Content from <a href="12-cluster.html">Working on a remote HPC system</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/12-cluster.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1434,7 +1437,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-13-scheduler"><p>Content from <a href="13-scheduler.html">Working with the scheduler</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/13-scheduler.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2202,7 +2205,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-14-modules"><p>Content from <a href="14-modules.html">Accessing software via Modules</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/14-modules.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2550,7 +2553,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-15-transferring-files"><p>Content from <a href="15-transferring-files.html">Transferring files with remote computers</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/15-transferring-files.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2696,7 +2699,7 @@ directory on ARCHER2.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2747,7 +2750,7 @@ local machine over SSH? Note that it may well fail, and that’s OK!</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Using <code>curl</code> or <code>wget</code> commands like the
 following:</p>
@@ -2901,7 +2904,7 @@ page if you’re unsure.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3028,7 +3031,7 @@ flags.</p>
   Commands
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3144,7 +3147,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-17-resources"><p>Content from <a href="17-resources.html">Using resources effectively</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/17-resources.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3852,7 +3855,7 @@ use like [gitbash][gitbash]
  -->
 </section></section><section id="aio-18-responsibility"><p>Content from <a href="18-responsibility.html">Using shared resources responsibly</a></p>
 <hr>
-<p> Last updated on 2023-09-05 | 
+<p> Last updated on 2023-09-12 | 
         
         <a href="https://github.com/EPCCed/2023-06-28-uoe-hpcintro/edit/main/episodes/18-responsibility.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3969,7 +3972,7 @@ node?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Building software, creating directories, and unpacking software are
 common and acceptable tasks for the login node: options #2
@@ -4202,7 +4205,7 @@ the following would be the best way to transfer them to ARCHER2?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Lets go through each option</p>
 <ol style="list-style-type: decimal">
@@ -4280,9 +4283,9 @@ use like [gitbash][gitbash]
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.4" class="external-link">sandpaper (0.12.4)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.6.0" class="external-link">pegboard (0.6.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.18" class="external-link">varnish (0.2.18)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.13.0" class="external-link">sandpaper (0.13.0)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.6.1" class="external-link">pegboard (0.6.1)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.3.0" class="external-link">varnish (0.3.0)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -4304,8 +4307,8 @@ use like [gitbash][gitbash]
   "url": "https://EPCCed.github.io/2023-06-28-uoe-hpcintro/aio.html",
   "identifier": "https://EPCCed.github.io/2023-06-28-uoe-hpcintro/aio.html",
   "dateCreated": "2023-06-14",
-  "dateModified": "2023-09-05",
-  "datePublished": "2023-09-05"
+  "dateModified": "2023-09-12",
+  "datePublished": "2023-09-12"
 }
 
   </script><script>
