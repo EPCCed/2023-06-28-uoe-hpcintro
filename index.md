@@ -21,7 +21,7 @@ To begin this lesson you must have completed the following
 
 ## Registration
 
-Please use the [ARCHER2 course registration form](https://www.archer2.ac.uk/training/register/?course=230626-software-carpentry)</a> to sign up for the workshop.
+Please use the [ARCHER2 course registration form](https://www.archer2.ac.uk/training/register/?course=230626-software-carpentry) to sign up for the workshop.
 
 ## General Information
 
@@ -34,9 +34,11 @@ tools available and how to use them effectively.
 By the end of this lesson, students will know how to:
 
 ::: checklist
+
  * Identify problems an HPC system can help solve
  * Use the UNIX shell (also known as terminal or command line) to operate a computer,
   connect to an HPC system, and write simple shell scripts.
  * Submit and manage jobs on an HPC system using a scheduler, transfer files, and use
   software through environment modules.
+
 :::

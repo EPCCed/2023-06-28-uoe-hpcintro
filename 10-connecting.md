@@ -207,8 +207,6 @@ ssh yourUsername@ARCHER2
 ```
 
 
-
-
 ```output
 This node is running Cray's Linux Environment version 1.3.2
 
